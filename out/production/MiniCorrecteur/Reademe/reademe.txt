@@ -1,0 +1,31 @@
+Date: 2022/10/26
+
+
+Cette interface graphique permet à l’utilisateur de corriger les orthographes des mots d’un texte qu’il saisit ou
+d’un fichier selon le dictionnaire qu’il choisit, et finalement de sauvegarder le texte corrigé dans un fichier.
+
+Voici la description pour l’utilisation :
+
+Sur le menu en haut de la fenêtre, il a y un menu de 3 boutons « fichier », « dictionnaire » et « vérifier » :
+-Quand on clique sur « fichier », il va apparaitre les options « ouvrir » qui peut lire un fichier du texte à choix
+ et « Enregistrer » pour sauvegarder le texte dans un fichier.
+-Quand on clique sur « dictionnaire », on peut charger un fichier dictionnaire à partir d’un fichier.
+-Quand on clique sur « vérifier », il va apparaitre une option « lancer » qui va vérifier le texte et mettre tous les
+ mots qui ne sont pas dans le dictionnaire en rouge.
+-Les fichiers existants de texte se trouvent dans le dossier «FichiersTxt».
+-Le fichier existant de dictionnaire se strouve dans le dossier «DictionnaireTxt».
+
+Sur la zone d’affichage au centre de la fenêtre, il affiche le texte que l’utilisateur saisit ou à partir d’un fichier existant.
+L’utilisateur peut voir apparaitre les mots en rouge après avoir cliqué sur « vérifier » et cliquant sur le bouton de droite
+sur un mot en rouge, on peut voir un menu qui affiche les 5 propositions pour la correction du mot selectionné.
+
+Notre interface graphique est composée par les classes « CorrecteurVue», « CorrecteurModele » « Correcteur » et
+« ConrrecteurControle ».
+- « CorrecteurVue » qui définit la fenêtre, les composants ( menu et textarea ) et les méthodes pour réaliser l'affichage
+  de texte, des mots inconnus en rouge. Et cette classe est connectée avec CorrecteurModele et CorrecteurControle
+- « CorrectuerModele » qui contient les attributs et les méthodes pour traiter et fournir les données nécessaires : ouvrir un texte et
+  enregistrer un texte corrigé dans un fichier, charger un fichier d'un dictionnaire (une liste de mots) et donner
+  5 propositions pour les mots inconnues selon le dictionnaire.
+- « CorrecteurControle » qui permet d’écouter tous les évènements qui ont lieu sur CorrecteurVue :
+  Ex: Clique les bouttons sur le menu, clique sur le bouton de droite du souris, etc.
+- « Correcteur» lance notre programme «MiniCorrecteur».
